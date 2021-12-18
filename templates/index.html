@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang = "en">
+{% extends "layout.html" %}
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block title %}
+    Log In
+{% endblock %}
 
-    <title>Output</title>
-  </head>
+{% block main %}
+  <h3>Products in order of decreasing popularity</h3>
+  <button class="btn btn-primary"><a href="/logout">Log out</a></button>
 
-  <body>
-    <h3>Products in order of decreasing popularity</h3>
-
-    <table>
+    <table class="table table-striped table_bg">
       <tr>
-        <th>Title</th>
-        <th>Price</th>
+        <th colspan="1">Title</th>
+        <th colspan="1">Price</th>
       </tr>
       {% for key, value in productsDictSorted.items() %}
         <tr>
@@ -23,7 +20,5 @@
         </tr>
       {% endfor %}
     </table>
-    
-  </body>
-</html>
-   
+
+{% endblock %}

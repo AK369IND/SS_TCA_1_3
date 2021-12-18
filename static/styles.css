@@ -1,0 +1,65 @@
+body
+{
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+.loginBox
+{
+    background-color: rgba(0, 0, 0, 0.521);
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+}
+.SSLogo
+{
+    position: absolute;
+    width: 350px;
+    height: 160px;
+    top: 10%;
+    left: 11%;
+}
+.usernameBox
+{
+    position: absolute;
+    width: 280px;
+    top: 45%;
+    left: 20%;
+}
+.passwordBox
+{
+    position: absolute;
+    width: 280px;
+    top: 57%;
+    left: 20%;
+}
+.submitBtn
+{
+    position: absolute;
+    width: 280px;
+    top: 73%;
+    left: 20%;
+    background-color: rgba(128, 255, 0, 0.699);
+    border-radius: 10px;
+    border-color: rgba(128, 255, 0, 0.699);
+}
+.forgotPassword
+{
+    position: absolute;
+    top: 85%;
+    left: 33%;
+    color:rgba(241, 240, 238, 0.603) ;
+}
+a{
+    color: aliceblue;
+}
+a:hover
+{
+    color: inherit;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}

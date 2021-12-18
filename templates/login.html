@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class="loginBox">
+        <div>
+            <img src="static/SSLogo.PNG" alt="SmartServ" class="SSLogo">
+        </div>
+        <form action="/login" method="post" name="loginForm" onsubmit="validEmailPassword(document.loginForm.username, document.loginForm.password)" class="loginForm">
+            <div class="form-group usernameBox">
+                <input autocomplete="off" autofocus class="form-control user" name="username" placeholder="Username" type="text" required>
+            </div>
+            <div class="form-group passwordBox">
+                <input class="form-control" name="password" placeholder="Password" type="password" id = "pass_word"required>
+            </div>
+            <br>
+            <button class="btn btn-primary submitBtn" type="submit" >Log In</button>
+        </form>
+        <a class="forgotPassword" href="mailto:support@smartserv.io">Forgot Your Password?</a>
+    </div> 
+
+<script>
+    function validEmailPassword(usernameInput, passwordInput) 
+    {
+        var validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        var validPasswordRegex = /^(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*\d)(?!.*[-+_!#$%^&*.,?]).+$/;
+        if (usernameInput.value.match(validEmailRegex) == null) 
+        {
+            alert("Invalid email address!");
+            document.loginForm.username.focus();
+            return false;
+        }
+        if(passwordInput.value.match(validPasswordRegex) == null)
+        {
+            alert("Invalid password! Must contain atleast 1 uppercase alphabet, 1 digit and only @ allowed");
+            document.loginForm.password.focus();
+            return false;
+        }
+        return true;
+        
+    }
+</script>
+{% endblock %}
