@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Output</title>
+  </head>
+
+  <body>
+    <h3>Products in order of decreasing popularity</h3>
+
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Price</th>
+      </tr>
+      {% for key, value in productsDictSorted.items() %}
+        <tr>
+          <td>{{value['title']}}</td>
+          <td>{{value['price']}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    
+  </body>
+</html>
+   
